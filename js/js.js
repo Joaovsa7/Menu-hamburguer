@@ -2,6 +2,9 @@ let botao = document.querySelector("#hamburger");
 
 let lateral = document.querySelector("aside");
 
+let body = document.querySelector("body");
+
+let progresso = document.querySelector('#progresso');
 
 botao.onclick = function () {
 
@@ -19,3 +22,9 @@ botao.onclick = function () {
 
 }
    
+body.onscroll = function(){
+
+    let ScrollTotal = body.scrollHeight - innerHeight;
+    let proporcao = scrollY / ScrollTotal;
+    progresso.style.width = `${Math.floor(proporcao * 100)}%`;
+}

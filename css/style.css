@@ -5,9 +5,15 @@
     font-family: 'Ubuntu Condensed', sans-serif;
 }
 
+
+body { 
+
+    height: 5000px;
+}
+
 .fundo { 
 
-background-image: url(../img/kevin-angelso-790040-unsplash.jpg);
+background-image: url(../img/fabian-grohs-423591-unsplash.jpg);
 width: 100vw;
 height: 100vh;
 z-index: -1000;
@@ -15,15 +21,26 @@ position: fixed;
 background-size: cover;
 }
 
+#progresso { 
+    height: 9px;
+    width: 1px;
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+
 aside {
-    background-color: #111;
     height: 100vh;
     width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: fixed;
     transform: translateX(-300px);
     transition: 1.2s;
 }
@@ -35,6 +52,7 @@ aside nav {
 
 aside.mostrando {
     transform: translateX(0);
+    background-color: #111;
 }
 nav a {
 
@@ -93,4 +111,17 @@ h2 {
 .barra.mostrando:nth-child(3){
     transform: rotate(-45deg);
 
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;
+    background-color: white;
+    
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: black;
+ 
 }
