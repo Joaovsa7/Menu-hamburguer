@@ -5,6 +5,16 @@
     font-family: 'Ubuntu Condensed', sans-serif;
 }
 
+.fundo { 
+
+background-image: url(../img/kevin-angelso-790040-unsplash.jpg);
+width: 100vw;
+height: 100vh;
+z-index: -1000;
+position: fixed;
+background-size: cover;
+}
+
 aside {
     background-color: #111;
     height: 100vh;
@@ -15,6 +25,7 @@ aside {
     align-items: center;
     position: relative;
     transform: translateX(-300px);
+    transition: 1.2s;
 }
 aside nav {
     display: flex;
@@ -24,7 +35,6 @@ aside nav {
 
 aside.mostrando {
     transform: translateX(0);
-    
 }
 nav a {
 
@@ -36,7 +46,7 @@ nav a {
 
   .invisivel {
 
-        visibility: hidden;
+        visibility: none;
     }
 h2 {
     color: white;
@@ -62,5 +72,25 @@ h2 {
     height: 4px;
     width: 30px;
     border-radius: 1px;
+    transition: 1.2s;
 }
 
+.barra.mostrando{
+
+    position: absolute;
+}
+
+.barra.mostrando:nth-child(1){
+    transform: rotate(45deg);
+
+}
+
+.barra.mostrando:nth-child(2){
+    display: none;
+
+}
+
+.barra.mostrando:nth-child(3){
+    transform: rotate(-45deg);
+
+}
